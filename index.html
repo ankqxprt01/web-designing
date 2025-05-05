@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Era</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+</head>
+<body>
+    <!-- navigation section -->
+    <nav class="navbar">
+        <div class="navbar__container"> 
+            <a href="index.html" id="navbar__logo">
+                <i class="fab fa-google">E</i>
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu" id="nav-act">
+                <li class="navbar__item" id="home-link">
+                    <a href="index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__btn" id="about-link">
+                    <a href="about.html" class="button navbar__links">About</a>
+                </li>
+                <li class="navbar__item" id="tech-link">
+                    <a href="tech.html" class="navbar__links">Tech</a>
+                </li>
+                <li class="navbar__item" id="contact-link">
+                    <a href="contact.html" class="navbar__links">Contact</a>
+                </li>
+                <li class="navbar__btn" id="signup-link">
+                    <a href="signup.html" class="button navbar__links">SignUp</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- hero-section -->
+    <div class="main">
+        <div class="main__container">
+
+            <div class="main__content">
+                <h1>Gaming Era</h1>
+                <h2>Are you ready?</h2>
+                <p>How pro you are?</p>
+                <button class="main__btn">
+                    <a href="signup.html">Get Started</a>
+                </button>
+            </div>
+            <div class="main__img--container">
+                <img src="images/gaming-war.jpg" alt="" id="main__img">
+            </div>
+        </div>
+        
+        <h1 class="services-title">See what the hype is about</h1>
+        
+        <div class="services">
+            <div class="services__container">
+                <div class="services__card">
+                    <h2>Experience Bliss</h2>
+                    <p>High Performance Gaming Zone</p>
+                    <button class="ser__btn"><a href="#!tech">Start your own Game</a></button>
+        
+                </div>
+                <div class="services__card">
+                    <h2>Are you dare to?</h2>
+                    <p>Knock Out!!!</p>
+                    <button class="ser__btn"><a href="#!tech">Get Started</a></button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- footer -->    
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="#about">How it works</a>
+                    <a href="#about">Career</a>
+                    <a href="#about">Our Team</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Contact Us</h2>
+                    <a href="#contact">Contact</a>
+                    <a href="#contact">Support</a>
+                    <a href="#contact">Term of services</a>
+                </div>
+            </div>
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Videos</h2>
+                    <a href="#signup">Submit</a>
+                    <a href="#signup">Agency</a>
+                    <a href="#signup">Influencer</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="#index">Instagram</a>
+                    <a href="#index">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="#" id="footer__logo">
+                        <i class="fab fa-google">
+                            <i class="fab fa-etsy"></i>
+                        </i>
+                    </a>
+                </div>
+                <p class="website__rights"> &copy; <i class="fab fa-google"></i> 2021. All rights reserved</p>
+                <div class="social__icons">
+                    <a href="#" class="social__icon--link" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social__icon--link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader scripts for index -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+   
+    <!-- JavaScript for active class functionality -->
+    <script>
+       function setActiveLink() {
+        const links = document.querySelectorAll('.navbar__item, .navbar__btn');
+        links.forEach(link => {
+            link.classList.remove('actives');  // Remove 'actives' class from all
+            const href = link.querySelector('a').getAttribute('href');
+            const currentLocation = window.location.pathname;
+
+            // Compare the href to the current page path
+            if (href === currentLocation || (href === 'index.html' && currentLocation === '/')) {
+                link.classList.add('actives');  // Add 'actives' class to the current link
+            }
+
+            // Also account for hash-based navigation (if using hash routing)
+            if (window.location.hash === href || (href === 'index.html' && window.location.hash === '')) {
+                link.classList.add('actives');
+            }
+        });
+    }
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', setActiveLink);
+
+    // Set active class on initial load
+    window.addEventListener('load', function() {
+        setActiveLink();  // Call setActiveLink to set the active class on page load
+    });
+
+    let menu = document.querySelector('#mobile-menu')
+    let menuLinks = document.querySelector('.navbar__menu')
+
+    menu.addEventListener('click',function() {
+    menu.classList.toggle('is-active')
+    menuLinks.classList.toggle('active')
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Era</title>
+    <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <style>
+      .error {
+    color: rgb(25, 86, 199);
+    font-weight: 900;
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+    </style>
+</head>
+<body>
+    <!-- navigation section -->
+    <nav class="navbar">
+        <div class="navbar__container"> 
+            <a href="#!index" id="navbar__logo">
+                <i class="fab fa-google">E</i>
+            </a>
+            <div class="navbar__toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar__menu" id="nav-act">
+                <li class="navbar__item" id="home-link">
+                    <a href="./index.html" class="navbar__links">Home</a>
+                </li>
+                <li class="navbar__btn" id="about-link">
+                    <a href="./about.html" class="button navbar__links">About</a>
+                </li>
+                <li class="navbar__item" id="tech-link">
+                    <a href="./tech.html" class="navbar__links">Tech</a>
+                </li>
+                <li class="navbar__item" id="contact-link">
+                    <a href="./contact.html" class="navbar__links">Contact</a>
+                </li>
+                <li class="navbar__btn" id="signup-link">
+                    <a href="./signup.html" class="button navbar__links">SignUp</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- hero-section -->
+    <div class="signup__content">
+      <div class="signup" >
+        <div class="card border-0" id="card">
+            <div class="front">
+              <p class="login_word">LOG IN</p>
+              <!-- <img src="https://drive.google.com/uc?export=view&id=1K5_tAX_taOQQ0wwmFx3P--V05kjvg4cu" alt="person picture"> -->
+              <img src="images/download.jpg" alt="">
+              <form method="post" action="" id="loginForm">
+                <div class="error" id="loginUsernameError"></div>
+                <input type="text" name="username" placeholder="Username" class="f1" maxlength="10" autocomplete="off" onkeyup="validateLoginUsername()">
+              
+                <div class="error" id="loginPasswordError"></div>
+                <input type="password" name="password" placeholder="Password" class="f1" maxlength="10" autocomplete="off" onkeyup="validateLoginPassword()">
+              
+                <button class="f1" name="login" value="clicked" onclick="return validateLoginForm()">Log in</button>
+                <span onclick="flip()">Create an account</span>
+              </form>
+            </div>
+            <div class="back">
+              <p class="signup_word">SIGN UP</p>
+              <form method="post" action="" id="signUp">
+                <div class="error" id="firstNameError"></div>
+                <input type="text" name="first_name" placeholder="First name" class="f1" maxlength="10" autocomplete="off" onkeyup="validateFirstName()">
+              
+                <div class="error" id="lastNameError"></div>
+                <input type="text" name="last_name" placeholder="Last name" class="f1" maxlength="10" autocomplete="off" onkeyup="validateLastName()">
+              
+                <div class="error" id="usernameError"></div>
+                <input type="text" name="username" placeholder="Username" class="f1" maxlength="10" autocomplete="off" onkeyup="validateUsername()">
+              
+                <div class="error" id="emailError"></div>
+                <input type="email" name="email" placeholder="E-mail" class="f1" maxlength="30" autocomplete="off" onkeyup="validateEmail()">
+              
+                <div class="error" id="passwordError"></div>
+                <input type="password" name="password" placeholder="Password" class="f1" maxlength="10" autocomplete="off" onkeyup="validatePassword()">
+              
+                <button class="f1" name="signup" value="clicked" onclick="return validateForm()">Sign up</button>
+                <span onclick="flip()">Log in</span>
+              </form>
+              
+              
+            </div>
+          </div>
+    </div>
+    </div>
+    <!-- footer -->    
+    <div class="footer__container">
+        <div class="footer__links">
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>About Us</h2>
+                    <a href="#!about">How it works</a>
+                    <a href="#!about">Career</a>
+                    <a href="#!about">Our Team</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Contact Us</h2>
+                    <a href="#!contact">Contact</a>
+                    <a href="#!contact">Support</a>
+                    <a href="#!contact">Term of services</a>
+                </div>
+            </div>
+            <div class="footer__link--wrapper">
+                <div class="footer__link--items">
+                    <h2>Videos</h2>
+                    <a href="#!signup">Submit</a>
+                    <a href="#!signup">Agency</a>
+                    <a href="#!signup">Influencer</a>
+                </div>
+                <div class="footer__link--items">
+                    <h2>Social Media</h2>
+                    <a href="#!index">Instagram</a>
+                    <a href="#!index">Facebook</a>
+                </div>
+            </div>
+        </div>
+        <div class="social__media">
+            <div class="social__media--wrap">
+                <div class="footer__logo">
+                    <a href="#" id="footer__logo">
+                        <i class="fab fa-google">
+                            <i class="fab fa-etsy"></i>
+                        </i>
+                    </a>
+                </div>
+                <p class="website__rights"> &copy; <i class="fab fa-google"></i> 2021. All rights reserved</p>
+                <div class="social__icons">
+                    <a href="#" class="social__icon--link" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social__icon--link" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- loader scripts for index -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script>
+        setTimeout(function () {
+            $('.preloader_bg').fadeToggle();
+        }, 100);
+    </script>
+    <script>
+        setTimeout(function () {
+            $('.loader_bg').fadeToggle();
+        }, 2000);      
+    </script>
+
+    <!-- JavaScript for active class functionality -->
+    <script>
+       function setActiveLink() {
+        const links = document.querySelectorAll('.navbar__item, .navbar__btn');
+        links.forEach(link => {
+            link.classList.remove('actives');  // Remove 'actives' class from all
+            const href = link.querySelector('a').getAttribute('href');
+            const currentLocation = window.location.pathname;
+
+            // Compare the href to the current page path
+            if (href === currentLocation || (href === './signup.html' && currentLocation === '/')) {
+                link.classList.add('actives');  // Add 'actives' class to the current link
+            }
+
+            // Also account for hash-based navigation (if using hash routing)
+            if (window.location.hash === href || (href === './signup.html' && window.location.hash === '')) {
+                link.classList.add('actives');
+            }
+        });
+    }
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', setActiveLink);
+
+    // Set active class on initial load
+    window.addEventListener('load', function() {
+        setActiveLink();  // Call setActiveLink to set the active class on page load
+    });
+
+
+    let menu = document.querySelector('#mobile-menu')
+    let menuLinks = document.querySelector('.navbar__menu')
+
+    menu.addEventListener('click',function() {
+    menu.classList.toggle('is-active')
+    menuLinks.classList.toggle('active')
+    })
+
+    // sign up
+    function flip() {
+        $('.card').toggleClass('flipped');
+    }   
+    </script>
+   <script>
+    // signup
+    function validateFirstName() {
+      const value = document.forms["signUp"]["first_name"].value.trim();
+      document.getElementById("firstNameError").textContent =
+        value === "" ? "First name is required." : "";
+    }
+  
+    function validateLastName() {
+      const value = document.forms["signUp"]["last_name"].value.trim();
+      document.getElementById("lastNameError").textContent =
+        value === "" ? "Last name is required." : "";
+    }
+  
+    function validateUsername() {
+      const value = document.forms["signUp"]["username"].value.trim();
+      document.getElementById("usernameError").textContent =
+        value === "" ? "Username is required." : "";
+    }
+  
+    function validateEmail() {
+      const value = document.forms["signUp"]["email"].value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      document.getElementById("emailError").textContent =
+        emailPattern.test(value) ? "" : "Enter a valid email address.";
+    }
+  
+    function validatePassword() {
+      const value = document.forms["signUp"]["password"].value;
+      document.getElementById("passwordError").textContent =
+        value.length >= 6 ? "" : "Password must be at least 6 characters.";
+    }
+  
+    function validateForm() {
+      validateFirstName();
+      validateLastName();
+      validateUsername();
+      validateEmail();
+      validatePassword();
+  
+      // Check if any error messages exist
+      const errors = document.querySelectorAll(".error");
+      for (let err of errors) {
+        if (err.textContent !== "") return false;
+      }
+      alert("✅ Signup successful!");
+
+      return true;
+    }
+
+    // login
+    function validateLoginUsername() {
+    const value = document.forms["loginForm"]["username"].value.trim();
+    document.getElementById("loginUsernameError").textContent =
+      value === "" ? "Username is required." : "";
+  }
+
+  function validateLoginPassword() {
+    const value = document.forms["loginForm"]["password"].value;
+    document.getElementById("loginPasswordError").textContent =
+      value.length >= 6 ? "" : "Password must be at least 6 characters.";
+  }
+
+  function validateLoginForm() {
+    validateLoginUsername();
+    validateLoginPassword();
+
+    const errors = document.querySelectorAll("#loginForm .error");
+    for (let err of errors) {
+      if (err.textContent !== "") return false;
+    }
+
+    alert("✅ Login successful!");
+    return true;
+  }
+  </script>
+    
+</body>
+</html>
