@@ -226,7 +226,7 @@ body{
         z-index: 1;
         width: 100%;
         max-width: 1300px;
-        padding: 0;
+        padding: 30px;
     }
 
     .navbar__menu{
