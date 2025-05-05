@@ -226,7 +226,7 @@ body{
         z-index: 1;
         width: 100%;
         max-width: 1300px;
-        padding: 30px;
+        padding: 0px;
     }
 
     .navbar__menu{
@@ -241,6 +241,8 @@ body{
         height: 50vh;
         z-index: -1;
         background: #131313;
+        padding-bottom: 20px;
+        
     }
 
     .navbar__menu.active {
