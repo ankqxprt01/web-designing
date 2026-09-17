@@ -132,8 +132,15 @@
     <div class="main">
       <div class="new__main">
         <!-- Background video -->
-        <video class="main__bg-video" autoplay muted loop playsinline>
-          <source src="../video/tekken2.mov" type="video/mp4" />
+        <video
+          id="bgVideo"
+          class="main__bg-video"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
+          <!-- <source src="../video/tekken2.mov" type="video/mp4" /> -->
           Your browser does not support the video tag.
         </video>
 
@@ -418,6 +425,23 @@
             btnText.text("Read more");
           }
         });
+      });
+
+      window.addEventListener("load", () => {
+        const loadVideo = () => {
+          const video = document.getElementById("bgVideo");
+
+          video.src = "../video/tekken2.mov";
+          video.load();
+
+          video.play().catch(() => {});
+        };
+
+        if ("requestIdleCallback" in window) {
+          requestIdleCallback(loadVideo);
+        } else {
+          setTimeout(loadVideo, 1000);
+        }
       });
     </script>
   </body>
