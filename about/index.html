@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Game Era</title>
-    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
@@ -16,19 +16,18 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
     />
-    <link rel="apple-touch-icon" href="./public/favicon.png" sizes="180x180" />
     <link
-      rel="icon"
-      type="image/png"
-      href="./public/favicon.png"
-      sizes="192x192"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
     />
   </head>
   <body>
     <!-- navigation section -->
     <nav class="navbar">
       <div class="navbar__container">
-        <a href="./" id="navbar__logo">
+        <a href="index.html" id="navbar__logo">
           <i class="fab fa-google">E</i>
         </a>
         <div class="navbar__toggle" id="mobile-menu">
@@ -44,13 +43,13 @@
             <a href="/about/" class="button navbar__links">About</a>
           </li>
           <li class="navbar__item" id="tech-link">
-            <a href="/tech/" class="navbar__links">Tech</a>
+            <a href="./tech.html" class="navbar__links">Tech</a>
           </li>
           <li class="navbar__item" id="contact-link">
-            <a href="contact/" class="navbar__links">Contact</a>
+            <a href="./contact" class="navbar__links">Contact</a>
           </li>
           <li class="navbar__btn" id="signup-link">
-            <a href="signup/" class="button navbar__links">SignUp</a>
+            <a href="./signup" class="button navbar__links">SignUp</a>
           </li>
         </ul>
       </div>
@@ -58,18 +57,52 @@
 
     <!-- hero-section -->
     <div class="main">
-      <div class="main__container">
-        <div class="main__content">
-          <h1>Gaming Era</h1>
-          <h2>Are you ready?</h2>
-          <p>How pro you are?</p>
-          <button class="main__btn">
-            <a href="signup.html">Get Started</a>
-          </button>
-        </div>
-        <div class="main__img--container">
-          <img src="images/gaming-war.jpg" alt="" id="main__img" />
-        </div>
+      <section class="wrapper">
+        <div class="top">About Us ?</div>
+        <div class="bottom" aria-hidden="true">About Us ?</div>
+      </section>
+
+      <div class="video__part">
+        <img src="video/tekkn2.gif" alt="" />
+      </div>
+
+      <div class="container mt-5">
+        <h2 class="mb-4 text-center text-white">Leaderboard</h2>
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Sr</th>
+              <th scope="col">Name</th>
+              <th scope="col">Console</th>
+              <th scope="col">City</th>
+              <th scope="col">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-dark">
+              <th scope="row">1</th>
+              <td>Alice Johnson</td>
+              <td>X Box Player</td>
+              <td>New York</td>
+              <td>980</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Bob Smith</td>
+              <td>Ps-5</td>
+              <td>San Francisco</td>
+              <td>920</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Carol Lee</td>
+              <td>PS-3</td>
+              <td>Chicago</td>
+              <td>900</td>
+            </tr>
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
       </div>
 
       <h1 class="services-title">See what the hype is about</h1>
@@ -98,28 +131,28 @@
         <div class="footer__link--wrapper">
           <div class="footer__link--items">
             <h2>About Us</h2>
-            <a href="#about">How it works</a>
-            <a href="#about">Career</a>
-            <a href="#about">Our Team</a>
+            <a href="#!about">How it works</a>
+            <a href="#!about">Career</a>
+            <a href="#!about">Our Team</a>
           </div>
           <div class="footer__link--items">
             <h2>Contact Us</h2>
-            <a href="#contact">Contact</a>
-            <a href="#contact">Support</a>
-            <a href="#contact">Term of services</a>
+            <a href="#!contact">Contact</a>
+            <a href="#!contact">Support</a>
+            <a href="#!contact">Term of services</a>
           </div>
         </div>
         <div class="footer__link--wrapper">
           <div class="footer__link--items">
             <h2>Videos</h2>
-            <a href="#signup">Submit</a>
-            <a href="#signup">Agency</a>
-            <a href="#signup">Influencer</a>
+            <a href="#!signup">Submit</a>
+            <a href="#!signup">Agency</a>
+            <a href="#!signup">Influencer</a>
           </div>
           <div class="footer__link--items">
             <h2>Social Media</h2>
-            <a href="#index">Instagram</a>
-            <a href="#index">Facebook</a>
+            <a href="#!index">Instagram</a>
+            <a href="#!index">Facebook</a>
           </div>
         </div>
       </div>
@@ -149,6 +182,16 @@
 
     <!-- loader scripts for index -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script>
+      setTimeout(function () {
+        $(".preloader_bg").fadeToggle();
+      }, 100);
+    </script>
+    <script>
+      setTimeout(function () {
+        $(".loader_bg").fadeToggle();
+      }, 2000);
+    </script>
 
     <!-- JavaScript for active class functionality -->
     <script>
@@ -162,7 +205,7 @@
           // Compare the href to the current page path
           if (
             href === currentLocation ||
-            (href === "index.html" && currentLocation === "/")
+            (href === "./about.html" && currentLocation === "/")
           ) {
             link.classList.add("actives"); // Add 'actives' class to the current link
           }
@@ -170,7 +213,7 @@
           // Also account for hash-based navigation (if using hash routing)
           if (
             window.location.hash === href ||
-            (href === "index.html" && window.location.hash === "")
+            (href === "./about.html" && window.location.hash === "")
           ) {
             link.classList.add("actives");
           }
