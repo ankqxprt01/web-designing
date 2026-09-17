@@ -724,9 +724,9 @@ body{
 
 
 @media screen and (max-width:1000px) {
-    .services{
+    /* .services{
         height: 1600px;
-    }
+    } */
 
     .services__container{
         flex-wrap: wrap;    
