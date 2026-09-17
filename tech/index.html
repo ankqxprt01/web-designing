@@ -66,8 +66,8 @@
     </nav>
 
     <!-- hero-section -->
-    <div class="main">
-      <div class="new__main">
+
+    <!-- <div class="new__main">
         <div class="main__content">
           <h1>Tech Gaming</h1>
           <h2>Are you ready?</h2>
@@ -81,12 +81,7 @@
             >
           </button>
 
-          <!-- Button trigger modal -->
-          <!-- <button type="button" class="btn btn-primary" >
-    Launch static backdrop modal
-  </button> -->
-
-          <!-- Modal -->
+          Modal
           <div
             class="modal fade"
             id="staticBackdrop"
@@ -130,10 +125,89 @@
           </div>
         </div>
         <div class="main__img--container">
-          <!-- <img src="/images/gaming.svg" alt="" id="main__img"> -->
           <img src="../images/tekken7.webp" alt="" id="main__img2" />
         </div>
+      </div> -->
+
+    <div class="main">
+      <div class="new__main">
+        <!-- Background video -->
+        <video class="main__bg-video" autoplay muted loop playsinline>
+          <source src="../video/tekken2.mov" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- Dark overlay -->
+        <div class="main__overlay"></div>
+
+        <!-- Content -->
+        <div class="main__content">
+          <h1>Tech Gaming</h1>
+
+          <h2>Are you ready?</h2>
+
+          <p>How pro you are?</p>
+
+          <button
+            type="button"
+            class="main__btn"
+            data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop"
+          >
+            Get Started
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="staticBackdrop"
+            data-bs-backdrop="static"
+            data-bs-keyboard="false"
+            tabindex="-1"
+            aria-labelledby="staticBackdropLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div
+                  class="modal-header justify-content-center position-relative"
+                >
+                  <h1
+                    class="modal-title fs-5 text-center w-100"
+                    id="staticBackdropLabel"
+                  >
+                    Tech Gaming
+                  </h1>
+
+                  <button
+                    type="button"
+                    class="btn-close position-absolute end-0 me-3"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+
+                <div class="modal-body">
+                  <p class="text-dark fs-5">
+                    🎮 Get ready for the ultimate gaming showdown!
+                  </p>
+
+                  <p class="text-dark fs-5 text-center">
+                    New features, tournaments, and leaderboards are on the way.
+                  </p>
+
+                  <p class="text-dark fs-5 text-center">
+                    <strong>Stay tuned — launching soon!</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
+      <!-- Everything below your hero -->
+      <div class="container my-4">...</div>
 
       <div class="container my-4">
         <div class="row align-items-center">
